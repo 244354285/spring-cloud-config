@@ -5,6 +5,23 @@ spring:
   application:
     name: eureka-client-01
 
+  rabbitmq:
+    host: 192.168.140.120
+    port: 5672
+    username: guest
+    password: guest
+
+  cloud:
+    bus:
+      enbale: true
+      trace:
+        enable: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
 eureka:
   client:
     service-url:
